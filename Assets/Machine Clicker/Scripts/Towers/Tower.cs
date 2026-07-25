@@ -66,7 +66,7 @@ public class Tower : MonoBehaviour
             foreach (Collider hit in hits)
             {
                 MoleCule m = hit.GetComponent<MoleCule>();
-                if (m != null && m.type != InputType.H20)
+                if (m != null && m.type != ObjectType.H20)
                 {
                     float dist = Vector3.Distance(transform.position, m.transform.position);
                     if (dist < minDist)

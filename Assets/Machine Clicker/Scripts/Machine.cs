@@ -84,7 +84,7 @@ public class Machine : MonoBehaviour
     
     public void Restart()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     } 
 
 

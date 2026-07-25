@@ -6,7 +6,7 @@ using Unity.Mathematics;
 
 
 
-public enum InputType
+public enum ObjectType
 {
     H20,
     Bug,
@@ -30,14 +30,14 @@ public class MoleCule : MonoBehaviour
     public Transform healthBar;
     private int currentPoint = 0;
 
-    public InputType type;
+    public ObjectType type;
 
     private int currentHealth;
 
     void Start()
     {
         maxHealth = currentHealth = defaultHealth + (healthIncremeantAmount * Machine.instance.CheckLevel());
-        if(type != InputType.H20) UPdateHealthBarFill();
+        if(type != ObjectType.H20) UPdateHealthBarFill();
     }
 
     void Update()
@@ -56,7 +56,7 @@ public class MoleCule : MonoBehaviour
             currentPoint++;
             if (currentPoint >= pathPoints.Length)
             {
-                if(type == InputType.H20)
+                if(type == ObjectType.H20)
                 {
                     Machine.instance.IncreaseOxygens(IncreaseAmount);
                 }

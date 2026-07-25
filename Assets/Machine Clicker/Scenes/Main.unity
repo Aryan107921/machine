@@ -7116,7 +7116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 53, y: -263}
+  m_AnchoredPosition: {x: 53, y: -193}
   m_SizeDelta: {x: 710, y: 60}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &865527008
@@ -7849,7 +7849,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 53, y: -163}
+  m_AnchoredPosition: {x: 53, y: -93}
   m_SizeDelta: {x: 710, y: 60}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1005342403
@@ -15579,11 +15579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66c9411a8042f8468a07ecc0e46ef61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fill: {fileID: 2119458633}
   economyText: {fileID: 1942701658}
-  maxTotalIncomeCapacity: 10000000
   defaultTotalIncome: 40
-  perCapita: 4
 --- !u!114 &2094193311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15596,13 +15593,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7101de85ccd1612489c32ac300b6a2b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fill: {fileID: 1501315864}
-  coupleIcon: {fileID: 0}
   populationText: {fileID: 1035840621}
-  maxPopulationCapacity: 100000
   defaultPopulation: 100
-  populationMultiplier: 2
-  populationCapacityMultiplier: 2
+  populationIncreaser: 2
 --- !u!1 &2100690262
 GameObject:
   m_ObjectHideFlags: 0

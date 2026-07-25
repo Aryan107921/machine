@@ -7,17 +7,12 @@ public class EconomyManager : MonoBehaviour
     
     public static EconomyManager instance;
 
-    
-    [SerializeField] private Image fill;
 
     [SerializeField] private TextMeshProUGUI economyText;
-    [SerializeField] private int maxTotalIncomeCapacity = 1000;
     
     
     [SerializeField] private int defaultTotalIncome = 20;
     
-    
-    [SerializeField] private int perCapita = 2;
 
     private int CurrentTotalIncome = 0;
     
@@ -30,7 +25,6 @@ public class EconomyManager : MonoBehaviour
     void Start()
     {
         CurrentTotalIncome = defaultTotalIncome;
-        UpdateFill();
         UpdateTxt(CurrentTotalIncome);
     }
 
@@ -38,20 +32,7 @@ public class EconomyManager : MonoBehaviour
     {
         // First once
         CurrentTotalIncome += amount;
-
-        UpdateFill();
         UpdateTxt(CurrentTotalIncome);
-    }
-
-    private void UpdateFill()
-    {
-        fill.fillAmount = (float)CurrentTotalIncome / maxTotalIncomeCapacity;
-
-        
-        if(fill.fillAmount < .6f) fill.color = Color.white;
-        
-        
-        if(fill.fillAmount > .6f) fill.color = Color.red;
     }
 
 
@@ -60,7 +41,6 @@ public class EconomyManager : MonoBehaviour
         if(CurrentTotalIncome >= amount)
         {
             CurrentTotalIncome -= amount;
-            UpdateFill();
             UpdateTxt(CurrentTotalIncome);
         }
         else
